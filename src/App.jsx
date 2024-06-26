@@ -4,7 +4,7 @@ import Hero from './Hero.jsx';
 import Mainpage from './Mainpage.jsx';
 import Notfound from './Notfound.jsx';
 import { BrowserRouter , Route, Routes } from "react-router-dom"
-import axios from 'axios';
+import  Footer from "./Footer.jsx"
 
 const App = () => {
     return (
@@ -18,6 +18,7 @@ const App = () => {
             <Route path='*' element={<Notfound/>}/> 
         </Routes>
         </BrowserRouter>
+        <Footer/>
         </>
     )
 }

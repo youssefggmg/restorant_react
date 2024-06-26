@@ -9,6 +9,13 @@
     margin: 0.5em 0;
     padding: 1em 0;
 }
+.Rochester{
+    font-family: "Rochester", cursive;
+}
+.category-image{
+    width: 90%;
+    height: 60vh;
+}
 .latestMeals{
     background-color: #ADB5BD;
     width: 90%;
@@ -42,4 +49,14 @@ hr{
 }
 .category{
     align-self: center;
+    /* height: 50vh; */
+}
+
+.meals-show{
+    background-color: #343A40;
+    width: 86%;
+    margin: auto;
+    justify-content:space-around;
+    padding: 0 10em;
+    margin-bottom: 4em;
 }
