@@ -12,7 +12,7 @@ const App = () => {
         <Navbare/>
         <BrowserRouter>
         <Routes>
-            <Route index path='/' element={<div>
+            <Route index path='/' element={<div style={{display:"flex", flexDirection:"column"}}>
                 <Hero/><Mainpage/>
             </div>}/>
             <Route path='*' element={<Notfound/>}/> 

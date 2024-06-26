@@ -9,4 +9,37 @@
     margin: 0.5em 0;
     padding: 1em 0;
 }
-.latest
+.latestMeals{
+    background-color: #ADB5BD;
+    width: 90%;
+    /* height: 6em; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+}
+.meal{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 1em;
+
+}
+.mealImage{
+    object-fit: fill;
+    width: 11em;
+    height: 24vh;
+    margin-bottom: 1em;
+}
+hr{
+    border: 0.5vh solid #000000;
+    opacity: 1;
+}
+.content{
+    width: 75%;
+    overflow-wrap: anywhere;
+}
+.category{
+    align-self: center;
+}
