@@ -1,6 +1,7 @@
 .navbar {
-    background-color: #9D6B53 !important;
+    background-color: #6C757D !important;
     padding: 1em;
+    margin: 0em !important;
 }
 
 .bolde {
@@ -9,13 +10,13 @@
 }
 
 .me-2 {
-    background-color: #D69F7E !important;
+    background-color: #DEE2E6 !important;
     height: 2.5em;
     align-self: center !important;
 }
 
 .search-button {
-    background-color: #D69F7E !important;
+    background-color: #495057 !important;
     color: black !important;
     border-color: black !important;
     width: 9em;

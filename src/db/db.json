@@ -1,0 +1,33 @@
+{
+    "meals": [
+        {
+            "id": 1,
+            "title": "Ramen",
+            "descreption": "A steaming bowl of ramen, brimming with savory broth, tender noodles, and an array of flavorful toppings.",
+            "catigory": "lunch",
+            "image":"ramen.jpeg"
+        },
+        {
+            "id": 2,
+            "title": "Ramen",
+            "descreption": "A steaming bowl of ramen, brimming with savory broth, tender noodles, and an array of flavorful toppings.",
+            "catigory": "lunch",
+            "image":"ramen.jpeg"
+        },
+        {
+            "id": 3,
+            "title": "Ramen",
+            "descreption": "A steaming bowl of ramen, brimming with savory broth, tender noodles, and an array of flavorful toppings.",
+            "catigory": "lunch",
+            "image":"ramen.jpeg"
+        }
+        ,
+        {
+            "id": 4,
+            "title": "Ramen",
+            "descreption": "A steaming bowl of ramen, brimming with savory broth, tender noodles, and an array of flavorful toppings.",
+            "catigory": "lunch",
+            "image":"ramen.jpeg"
+        }
+    ]
+}
