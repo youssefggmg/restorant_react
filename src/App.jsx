@@ -3,8 +3,11 @@ import Navbare from './NavBar.jsx';
 import Hero from './Hero.jsx';
 import Mainpage from './Mainpage.jsx';
 import Notfound from './Notfound.jsx';
-import { BrowserRouter , Route, Routes } from "react-router-dom"
-import  Footer from "./Footer.jsx"
+import { BrowserRouter , Route, Routes } from "react-router-dom";
+import  Footer from "./Footer.jsx";
+import About from "./About.jsx"
+import Addmeal from './Addmeal.jsx';
+import "./style/globale.css"
 
 const App = () => {
     return (
@@ -16,6 +19,8 @@ const App = () => {
                 <Hero/><Mainpage/>
             </div>}/>
             <Route path='*' element={<Notfound/>}/> 
+            <Route path='/about' element={<div> <Hero/> <About/> </div>} />
+            <Route path='/addmeal' element={<div> <Addmeal/> </div>}/>
         </Routes>
         </BrowserRouter>
         <Footer/>

@@ -33,9 +33,9 @@ function Navbare() {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link href="rtyeuwi" className='bolde'>AddMeal</Nav.Link>
+                                    <Nav.Link href="/addmeal" className='bolde'>AddMeal</Nav.Link>
                                     <Nav.Link href="/" className='bolde'>Home</Nav.Link>
-                                    <Nav.Link href="#action2" className='bolde'>about</Nav.Link>
+                                    <Nav.Link href="/about" className='bolde'>about</Nav.Link>
                                 </Nav>
                                 <Form className="d-flex">
                                     <Form.Control

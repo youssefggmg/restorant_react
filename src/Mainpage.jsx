@@ -30,48 +30,50 @@ const Mainpage = () => {
 
     return (
         <>
-            <h1 className='title'>The Latest Meals Added</h1>
-            <div className='latestMeals'>
+            <h1 className='title text-center mt-4 mb-6'>The Latest Meals Added</h1>
+            <div className='latestMeals grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4'>
                 {lastFiveMeals.map(meal => (
-                    <div key={meal.id} className='meal'>
-                        <img src={meal.image} alt={meal.title} className='mealImage' />
-                        <div className='content'>
-                            <h2>{meal.title}</h2>
-                            <hr />
-                            <p>{meal.description}</p>
+                    <div key={meal.id} className='meal border rounded-lg p-4 bg-zinc-500'>
+                        <img src={meal.image} alt={meal.title} className='mealImage w-full h-40 object-cover rounded-lg' />
+                        <div className='content mt-4'>
+                            <h2 className='text-xl font-semibold'>{meal.title}</h2>
+                            <hr className='my-2'/>
+                            <p className='text-gray-700'>{meal.description}</p>
                         </div>
-                        <h3 className='category'>{meal.catigory}</h3>
+                        <h3 className='category text-right mt-2 text-sm text-gray-500'>{meal.catigory}</h3>
                     </div>
                 ))}
             </div>
-            <h1 className='title'>The Categories</h1>
-            <div className='flex justify-around px-32'>
+            <h1 className='title text-center mt-10 mb-6'>The Categories</h1>
+            <div className='flex flex-wrap justify-center gap-6 px-4'>
                 {categorys.map((category, index) => {
                     return (
-                        <div key={index} className="max-w-sm border border-gray-200 rounded-lg shadow dark:border-gray-700 bg-zinc-400 flex flex-col">
-                            <img className="rounded-t-lg category-image self-center mt-6" src={category} alt={category} />
+                        <div key={index} className="max-w-xs border border-gray-200 rounded-lg shadow dark:border-gray-700 bg-zinc-400 flex flex-col">
+                            <img className="rounded-t-lg category-image self-center mt-6 w-full h-40 object-cover" src={category} alt={category} />
                             <div className="p-5 flex justify-center">
-                                <h1 className="mb-2 text-8xl font-bold tracking-tight text-gray-900 Rochester">Breakfast</h1>
+                                <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 Rochester">Breakfast</h1>
                             </div>
                         </div>
                     )
                 })}
             </div>
 
-            <h1 className='title'>All the Meals</h1>
-            <div className='meals-show flex flex-wrap justify-center'>
+            <h1 className='title text-center mt-10 mb-6'>All the Meals</h1>
+            <div className='meals-show grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 px-4'>
                 {Meal.map((meal) => {
                     return (
-                        <Card key={meal.id} style={{ width: '20rem' }} className='my-7'>
-                            <Card.Img variant="top" src={meal.image} alt='meal images' />
-                            <Card.Body className='bg-gray-500 '>
-                                <Card.Title>{meal.title}</Card.Title>
-                                <Card.Text>
+                        <div>
+                        <Card key={meal.id} className='my-4 shadow-lg'>
+                            <Card.Img variant="top" src={meal.image} alt='meal images' className='w-full h-40 object-cover' />
+                            <Card.Body className='bg-gray-500'>
+                                <Card.Title className='text-lg font-bold'>{meal.title}</Card.Title>
+                                <Card.Text className='text-gray-200'>
                                     {meal.description}
                                 </Card.Text>
-                                <Button variant="primary">Moor info</Button>
+                                <Button variant="primary">More info</Button>
                             </Card.Body>
                         </Card>
+                        </div>
                     )
                 })}
             </div>
