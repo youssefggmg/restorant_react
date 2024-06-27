@@ -16,7 +16,7 @@ const Mainpage = () => {
             const meals = response.data;
             setMeal(meals);
             const lastFiveMeals = meals.slice(-5); // Get the last 5 items
-            setLastFiveMeals(lastFiveMeals);
+            setLastFiveMeals(lastFiveMeals.reverse());
         } catch (error) {
             console.log(error);
         }
@@ -25,8 +25,8 @@ const Mainpage = () => {
     useEffect(() => {
         getmeals("http://localhost:8000/meals");
     }, []);
-
-    console.log(Meal);
+    
+    console.log(lastFiveMeals);
 
     return (
         <>

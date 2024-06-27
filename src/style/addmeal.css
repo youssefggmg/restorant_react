@@ -24,3 +24,7 @@
 .Rochester{
     font-family: "Rochester", cursive !important;
 }
+.errors{
+    color: red;
+    text-align: center;
+}
