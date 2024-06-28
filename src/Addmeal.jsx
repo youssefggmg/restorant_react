@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./style/addmeal.css";
+import { useNavigate } from 'react-router-dom';
 
 const Addmeal = () => {
     const [meal, setMeal] = useState({
@@ -15,6 +16,7 @@ const Addmeal = () => {
         last: ""
     })
     const [ImageUrl, setImageUrl] = useState("")
+    const navigation = useNavigate();
 
     const uploadImage = async (Image) => {
         const data = new FormData();
@@ -69,7 +71,7 @@ const Addmeal = () => {
                 })
                 setMeal({ meal, title: "", description: "", category: "", image: "" })
                 setImageUrl("");
-                history.push("/")
+                navigation('/');
             } catch (error) {
                 console.log(error);
             }

@@ -3,12 +3,14 @@ import "./style/main.css";
 import axios from 'axios';
 import './index.css';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card'
+import { useNavigate } from 'react-router';
 
-const Mainpage = () => {
+const Mainpage = ({getmeal}) => {
     const [Meal, setMeal] = useState([]); // Initialize as an array
     const [lastFiveMeals, setLastFiveMeals] = useState([]);
     const categorys = ["breakfast.jpeg", "launch.jpeg", "diner.jpeg"];
+    const navegation = useNavigate() 
 
     const getmeals = async (url) => {
         try {
@@ -25,8 +27,22 @@ const Mainpage = () => {
     useEffect(() => {
         getmeals("http://localhost:8000/meals");
     }, []);
+    const deletemeal=async(id)=>{
+        const deleteMeal= await axios.delete("http://localhost:8000/meals/"+id);
+        const response = await axios.get("http://localhost:8000/meals");
+        const meals = response.data;
+            setMeal(meals);
+    }
+
+    const mealinfo = (id)=>{
+        const meal= Meal.find(e=>{
+            return e.id == id
+        })
+        getmeal(meal)
+        navegation("/mealinfo")
+    }
     
-    console.log(lastFiveMeals);
+    console.log(Meal);
 
     return (
         <>
@@ -70,7 +86,8 @@ const Mainpage = () => {
                                 <Card.Text className='text-gray-200'>
                                     {meal.description}
                                 </Card.Text>
-                                <Button variant="primary">More info</Button>
+                                <Button variant="primary" onClick={e =>mealinfo(meal.id)}>More info</Button>
+                                <button type="button" className="btn btn-danger" onClick={e =>deletemeal(meal.id)}>delete</button>
                             </Card.Body>
                         </Card>
                         </div>
