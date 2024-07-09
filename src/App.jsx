@@ -9,6 +9,7 @@ import About from "./About.jsx"
 import Addmeal from './Addmeal.jsx';
 import "./style/globale.css"
 import MealInfo from './MealInfo.jsx';
+import Home from './Home.jsx';
 
 export const MealContext = createContext({})
 
@@ -24,9 +25,7 @@ const App = () => {
                 <Navbare />
                 <BrowserRouter>
                     <Routes>
-                        <Route index path='/' element={<div style={{ display: "flex", flexDirection: "column" }}>
-                            <Hero /><Mainpage getmeal={getmeal} />
-                        </div>} />
+                        <Route index path='/' element={<Home getmeal={getmeal}/>} />
                         <Route path='*' element={<Notfound />} />
                         <Route path='/about' element={<div> <Hero /> <About /> </div>} />
                         <Route path='/addmeal' element={<div> <Addmeal /> </div>} />
